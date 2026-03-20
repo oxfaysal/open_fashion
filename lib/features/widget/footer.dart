@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:open_fashion/core/style/text_style.dart';
+import 'package:open_fashion/features/widget/divider.dart';
 
 import '../../core/color/colors.dart';
 
@@ -34,12 +35,7 @@ class Footer extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20),
-              Center(
-                child: Image.asset(
-                  "assets/images/divider.png",
-                  fit: BoxFit.contain,
-                ),
-              ),
+              CustomDivider(width: 50),
               SizedBox(height: 20),
               Center(
                 child: Column(
@@ -57,12 +53,7 @@ class Footer extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Center(
-                child: Image.asset(
-                  "assets/images/divider.png",
-                  fit: BoxFit.contain,
-                ),
-              ),
+              CustomDivider(width: 50),
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -12,4 +12,6 @@ class AppColors {
   static final btnBorderColor = Color(0xFFDEDEDE);
   static final copyrightBgColor = Color(0xFFC4C4C4);
   static final iconColor = Color(0xFF14142B);
+  static final tabActiveColor = Color(0xFF212806);
+  static final offWhiteColor = Color(0xFFFCFCFC);
 }

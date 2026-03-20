@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:open_fashion/api/trending_tag.dart';
 import 'package:open_fashion/core/color/colors.dart';
 import 'package:open_fashion/core/style/text_style.dart';
 import 'package:open_fashion/features/widget/custom_appbar.dart';
+import 'package:open_fashion/features/widget/home/arrival_grid_card.dart';
+
+import '../../api/arrival_json.dart';
+import '../widget/divider.dart';
+import '../widget/home/arrival_list_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,6 +18,38 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String _selectedTab = 'All';
+  List<dynamic> categoryList = arrival[0]['categories'];
+  List<dynamic> itemList = arrival[0]['products'];
+
+  List<dynamic> get filteredItems {
+    return _selectedTab == 'All'
+        ? arrival[0]['products']
+        : arrival[0]['products']
+              .where((item) => item['category'] == _selectedTab)
+              .toList();
+  }
+
+  final ScrollController _scrollController = ScrollController();
+  int _currentPage = 0;
+  final double _itemWidth = 276;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(() {
+      setState(() {
+        _currentPage = (_scrollController.offset / _itemWidth).round();
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +97,356 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
+            SizedBox(height: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 5,
+              children: [
+                Text(
+                  "New Arrival".toUpperCase(),
+                  style: AppTextStyle.textBlack18w400,
+                ),
+                CustomDivider(width: 50),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: categoryList
+                      .map((categoryName) => _buildTab(categoryName))
+                      .toList(),
+                ),
+              ),
+            ),
+
+            SizedBox(
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (child, animation) =>
+                    FadeTransition(opacity: animation, child: child),
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.7,
+                  ),
+                  key: ValueKey(_selectedTab),
+                  itemCount: filteredItems.length,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 10, right: 5),
+                      child: ArrivalGridCard(
+                        img: filteredItems[index]['image_url'],
+                        title: filteredItems[index]['title'],
+                        price: filteredItems[index]['price'].toString(),
+                        onPress: () {},
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+
+            TextButton.icon(
+              onPressed: () {},
+              label: Text("Explore More", style: AppTextStyle.textBlack16w400),
+              icon: Icon(
+                LucideIcons.arrowRight,
+                size: 24,
+                color: AppColors.blackColor,
+              ),
+              iconAlignment: IconAlignment.end,
+            ),
+            SizedBox(height: 40),
+
+            CustomDivider(width: 50),
+            SizedBox(height: 10),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/images/prada.png"),
+                  Image.asset("assets/images/burberry.png"),
+                  Image.asset("assets/images/boss.png"),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/images/catier.png"),
+                  Image.asset("assets/images/gucci.png"),
+                  Image.asset("assets/images/tiffany.png"),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 10),
+
+            CustomDivider(width: 50),
+
+            SizedBox(height: 50),
+
+            Text(
+              "Collections".toUpperCase(),
+              style: AppTextStyle.textBlack18w400SP4,
+            ),
+
+            SizedBox(height: 20),
+
+            AspectRatio(
+              aspectRatio: 16 / 9,
+              child: Stack(
+                fit: StackFit.expand,
+
+                children: [
+                  Image.asset(
+                    'assets/images/colection_model.png',
+                    fit: BoxFit.cover,
+                    alignment: Alignment.centerLeft,
+                  ),
+
+                  Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.centerRight,
+                        end: Alignment.centerLeft,
+                        colors: [Color(0x55C8C8C8), Colors.transparent],
+                        stops: [0.0, 0.55],
+                      ),
+                    ),
+                  ),
+
+                  Positioned(
+                    bottom: 0,
+                    right: 10,
+                    child: Text('10', style: AppTextStyle.collection10Design),
+                  ),
+
+                  Positioned(
+                    bottom: 45,
+                    right: 25,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'October',
+                          style: AppTextStyle.collectionOctoberDesign,
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Collection'.toUpperCase(),
+                          style: AppTextStyle.collectionDesign,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
+              child: AspectRatio(
+                aspectRatio: 1 / 1,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Transform(
+                        transform: Matrix4.identity()..scale(0.9),
+                        alignment: Alignment.centerLeft,
+                        child: Image.asset(
+                          'assets/images/autumn.png',
+                          fit: BoxFit.cover,
+                          height: double.infinity,
+                          width: double.infinity,
+                          alignment: const Alignment(-1.25, 0.0),
+                        ),
+                      ),
+
+                      Positioned(
+                        top: 50,
+                        right: 55,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Autumn',
+                              style: AppTextStyle.autumnText45Design,
+                            ),
+                            Text(
+                              'Collection'.toUpperCase(),
+                              style: AppTextStyle.collection15Design,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            AspectRatio(
+              aspectRatio: 16 / 8,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/video_image.png"),
+                    fit: BoxFit.cover,
+                    alignment: Alignment.topCenter,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      color: AppColors.blackColor.withAlpha(100),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      LucideIcons.play,
+                      color: AppColors.whiteColor,
+                      size: 24,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 50),
+
+            Text(
+              "Just for You".toUpperCase(),
+              style: AppTextStyle.textBlack18w400SP4,
+            ),
+
+            SizedBox(height: 10),
+            CustomDivider(width: 50),
+
+            SizedBox(height: 30),
+
+            SizedBox(
+              height: 440,
+              child: ListView.builder(
+                controller: _scrollController,
+                scrollDirection: Axis.horizontal,
+                itemCount: filteredItems.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.only(
+                      left: index == 0 ? 16.0 : 8.0,
+                      right: index == filteredItems.length - 1 ? 20.0 : 8.0,
+                    ),
+                    child: SizedBox(
+                      width: 260,
+                      child: ArrivalListCard(
+                        img: filteredItems[index]['image_url'],
+                        title: filteredItems[index]['title'],
+                        price: filteredItems[index]['price'].toString(),
+                        onPress: () {},
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(filteredItems.length, (index) {
+                final bool isActive = index == _currentPage;
+                return Transform.rotate(
+                  angle: 45 * 3.14159 / 180,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    margin: const EdgeInsets.symmetric(horizontal: 6),
+                    width: isActive ? 6 : 5,
+                    height: isActive ? 6 : 5,
+                    decoration: BoxDecoration(
+                      color: isActive ? Colors.black : Colors.transparent,
+                      border: isActive
+                          ? null
+                          : Border.all(color: Colors.grey.shade400, width: 1),
+                    ),
+                  ),
+                );
+              }),
+            ),
+
+            SizedBox(height: 60),
+
+            Text(
+              "@Trending".toUpperCase(),
+              style: AppTextStyle.textBlack18w400SP4,
+            ),
+
+            SizedBox(height: 20),
+
+            Wrap(
+              spacing: 15,
+              children: trendingTag.map((tag) {
+                return ChoiceChip(
+                  label: Text(tag),
+                  selected: false,
+                  backgroundColor: AppColors.capsulBgF9Color,
+                  showCheckmark: false,
+                  labelStyle: AppTextStyle.tabUnActive14w400,
+                );
+              }).toList(),
+            ),
+
+            SizedBox(height: 60),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTab(String tab) {
+    final bool isSelected = _selectedTab == tab;
+
+    return GestureDetector(
+      onTap: () => setState(() => _selectedTab = tab),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 1500),
+        margin: const EdgeInsets.only(right: 10),
+        padding: const EdgeInsets.only(right: 18, top: 10, bottom: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              tab,
+              style: isSelected
+                  ? AppTextStyle.tabActive14w400
+                  : AppTextStyle.tabUnActive14w400,
+            ),
+            SizedBox(height: 2),
+            if (isSelected)
+              Transform.rotate(
+                angle: 45 * 3.14159 / 180, // 45 ডিগ্রি rotate
+                child: Container(
+                  height: 8,
+                  width: 8,
+                  decoration: BoxDecoration(color: AppColors.primaryColor),
+                ),
+              ),
           ],
         ),
       ),
