@@ -4,7 +4,10 @@ import 'package:open_fashion/api/trending_tag.dart';
 import 'package:open_fashion/core/color/colors.dart';
 import 'package:open_fashion/core/style/text_style.dart';
 import 'package:open_fashion/features/widget/custom_appbar.dart';
+import 'package:open_fashion/features/widget/footer.dart';
+import 'package:open_fashion/features/widget/home/accessible_items.dart';
 import 'package:open_fashion/features/widget/home/arrival_grid_card.dart';
+import 'package:open_fashion/features/widget/home/follow_us.dart';
 
 import '../../api/arrival_json.dart';
 import '../widget/divider.dart';
@@ -30,16 +33,27 @@ class _HomeScreenState extends State<HomeScreen> {
               .toList();
   }
 
-  final ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();   // SingleChildScrollView এর জন্য
+  final ScrollController _listScrollController = ScrollController(); // ListView এর জন্য
   int _currentPage = 0;
   final double _itemWidth = 276;
+  bool _isScrolled = false;
 
   @override
   void initState() {
     super.initState();
+
+    // AppBar color change
     _scrollController.addListener(() {
       setState(() {
-        _currentPage = (_scrollController.offset / _itemWidth).round();
+        _isScrolled = _scrollController.offset > 560;
+      });
+    });
+
+    // Dot indicator
+    _listScrollController.addListener(() {
+      setState(() {
+        _currentPage = (_listScrollController.offset / _itemWidth).round();
       });
     });
   }
@@ -47,14 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void dispose() {
     _scrollController.dispose();
+    _listScrollController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      backgroundColor: AppColors.whiteColor,
+      appBar: CustomAppBar(bgColor: _isScrolled ? Colors.white : AppColors.secondaryColor,),
       body: SingleChildScrollView(
+        controller: _scrollController,
         child: Column(
           children: [
             Container(
@@ -344,7 +361,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 440,
               child: ListView.builder(
-                controller: _scrollController,
+                controller: _listScrollController,
                 scrollDirection: Axis.horizontal,
                 itemCount: filteredItems.length,
                 itemBuilder: (context, index) {
@@ -400,19 +417,122 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20),
 
             Wrap(
-              spacing: 15,
+              spacing: 8,
               children: trendingTag.map((tag) {
                 return ChoiceChip(
-                  label: Text(tag),
+                  label: Text(tag, style: AppTextStyle.tagTextDesign),
                   selected: false,
+                  onSelected: (_) {},
                   backgroundColor: AppColors.capsulBgF9Color,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(color: Colors.transparent),
+                  ),
                   showCheckmark: false,
-                  labelStyle: AppTextStyle.tabUnActive14w400,
                 );
               }).toList(),
             ),
 
-            SizedBox(height: 60),
+            SizedBox(height: 50),
+
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(color: AppColors.containerColor),
+              child: Column(
+                children: [
+                  Text(
+                    "Open \nFashion",
+                    style: AppTextStyle.logo,
+                    textAlign: TextAlign.center,
+                  ),
+
+                  SizedBox(height: 16),
+
+                  Text(
+                    "Making a luxurious lifestyle accessible \nfor a generous group of women is our \ndaily drive.",
+                    style: AppTextStyle.tabActive14w400,
+                    textAlign: TextAlign.center,
+                  ),
+
+                  SizedBox(height: 16),
+                  CustomDivider(width: 50),
+
+                  SizedBox(height: 30),
+
+                  Row(
+                    children: [
+                      AccessibleItems(
+                        img: "assets/images/accessible1.png",
+                        title: "Fast shipping. \nFree on orders over \$25.",
+                      ),
+                      AccessibleItems(
+                        img: "assets/images/accessible2.png",
+                        title: "Sustainable process \nfrom start to finish.",
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      AccessibleItems(
+                        img: "assets/images/accessible3.png",
+                        title: "Unique designs \nand high-quality materials.",
+                      ),
+                      AccessibleItems(
+                        img: "assets/images/accessible4.png",
+                        title: "Fast shipping. \nFree on orders over \$25.",
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+
+                  Center(
+                    child: Image.asset(
+                      "assets/images/accessible_sign.png",
+                      width: 80,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 50),
+
+            Text(
+              "Follow Us".toUpperCase(),
+              style: AppTextStyle.textBlack18w400SP4,
+            ),
+            SizedBox(height: 12),
+            Center(child: Icon(LucideIcons.instagram200, color: AppColors.iconColor, size: 36,)),
+            SizedBox(height: 16),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              child: Row(
+                spacing: 16,
+                children: [
+                  FollowUs(img: "assets/images/follow1.png", title: "@_mia"),
+                  FollowUs(img: "assets/images/follow2.png", title: "@_jihyn"),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              child: Row(
+                spacing: 16,
+                children: [
+                  FollowUs(img: "assets/images/follow3.png", title: "@_mia"),
+                  FollowUs(img: "assets/images/follow4.png", title: "@_jihyn"),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 40),
+
+            Footer(),
+
           ],
         ),
       ),

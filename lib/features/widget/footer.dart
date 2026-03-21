@@ -17,34 +17,52 @@ class Footer extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20, right: 20),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(LucideIcons.twitter,
-                    color: AppColors.blackColor,
-                    size: 20,
-                  ),
-                  Icon(LucideIcons.instagram,
-                    color: AppColors.blackColor,
-                    size: 20,
-                  ),
-                  Icon(LucideIcons.youtube,
-                    color: AppColors.blackColor,
-                    size: 20,
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 80),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        LucideIcons.twitter,
+                        size: 22,
+                        color: AppColors.iconColor,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        LucideIcons.instagram,
+                        size: 22,
+                        color: AppColors.iconColor,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        LucideIcons.youtube,
+                        size: 22,
+                        color: AppColors.iconColor,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 16),
               CustomDivider(width: 50),
-              SizedBox(height: 20),
+              SizedBox(height: 25),
               Center(
                 child: Column(
                   children: [
                     Text(
-                      "support@openui.design",
+                      "loomixdev@gmail.com",
                       style: AppTextStyle.text33Grey16w400,
                     ),
-                    Text("+60 825 876", style: AppTextStyle.text33Grey16w400),
+                    Text(
+                      "+880 1833 732555",
+                      style: AppTextStyle.text33Grey16w400,
+                    ),
                     Text(
                       "08:00 - 22:00 - Everyday",
                       style: AppTextStyle.text33Grey16w400,
@@ -52,34 +70,47 @@ class Footer extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 25),
               CustomDivider(width: 50),
               SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextButton(
-                    onPressed: () {},
-                    child: Text("About", style: AppTextStyle.textBlack16w400),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text("Contact", style: AppTextStyle.textBlack16w400),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text("Blog", style: AppTextStyle.textBlack16w400),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("About", style: AppTextStyle.textBlack16w400),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Contact",
+                        style: AppTextStyle.textBlack16w400,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Blog", style: AppTextStyle.textBlack16w400),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
         ),
+        SizedBox(height: 10),
         Container(
+          padding: EdgeInsets.only(top: 15, bottom: 30),
           decoration: BoxDecoration(
-            color: AppColors.copyrightBgColor,
+            color: AppColors.copyrightBgColor.withAlpha(40),
           ),
-          child: Center(child: Text("Copyright© OpenUI All Rights Reserved.", style: AppTextStyle.text55Grey12w400,)),
+          child: Center(
+            child: Text(
+              "Copyright © Faysal - All Rights Reserved.",
+              style: AppTextStyle.text55Grey12w400,
+            ),
+          ),
         ),
       ],
     );

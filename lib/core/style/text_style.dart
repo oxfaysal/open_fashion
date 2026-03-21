@@ -18,6 +18,12 @@ class AppTextStyle {
     color: AppColors.whiteColor,
   );
 
+  static final textWhite14w400 = GoogleFonts.tenorSans(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.whiteColor,
+  );
+
   static final logo = GoogleFonts.playfairDisplay(
     fontSize: 30,
     fontWeight: FontWeight.w400,
@@ -78,6 +84,12 @@ class AppTextStyle {
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: AppColors.textGrey88Color,
+  );
+
+  static final tagTextDesign = GoogleFonts.tenorSans(
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
+    color: AppColors.bodyGrey33Color,
   );
 
 

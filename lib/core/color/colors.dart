@@ -14,4 +14,5 @@ class AppColors {
   static final iconColor = Color(0xFF14142B);
   static final tabActiveColor = Color(0xFF212806);
   static final offWhiteColor = Color(0xFFFCFCFC);
+  static final containerColor = Color(0xFFF2F2F2);
 }
