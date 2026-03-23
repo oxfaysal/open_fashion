@@ -19,11 +19,16 @@ class OutlineIconBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 60,
+      width: 200,
       child: OutlinedButton.icon(
-        style: OutlinedButton.styleFrom(side: BorderSide(color: AppColors.btnBorderColor),),
+        style: OutlinedButton.styleFrom(
+          side: BorderSide(color: AppColors.btnBorderColor),
+          shape: RoundedRectangleBorder(),
+        ),
         onPressed: onPressed,
-        icon: Icon(icon, color: AppColors.whiteColor, size: 20,),
-        label: Text(title, style: AppTextStyle.textWhite16w400),
+        icon: Icon(icon, color: AppColors.blackColor, size: 20,),
+        iconAlignment: IconAlignment.end,
+        label: Text(title, style: AppTextStyle.textBlack16w400),
       ),
     );
   }

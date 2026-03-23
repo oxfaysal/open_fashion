@@ -24,6 +24,26 @@ class AppTextStyle {
     color: AppColors.whiteColor,
   );
 
+  static final textBlack14w400 = GoogleFonts.tenorSans(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+  );
+
+  static final textBlack14w400SP2 = GoogleFonts.tenorSans(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+    letterSpacing: 2.0
+  );
+
+  static final textWhite14w400SP2 = GoogleFonts.tenorSans(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.whiteColor,
+    letterSpacing: 2,
+  );
+
   static final logo = GoogleFonts.playfairDisplay(
     fontSize: 30,
     fontWeight: FontWeight.w400,
@@ -64,6 +84,12 @@ class AppTextStyle {
 
   static final text33Grey12w400 = GoogleFonts.tenorSans(
     fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColors.bodyGrey33Color,
+  );
+
+  static final text33Grey14w400 = GoogleFonts.tenorSans(
+    fontSize: 14,
     fontWeight: FontWeight.w400,
     color: AppColors.bodyGrey33Color,
   );

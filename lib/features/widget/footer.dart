@@ -5,8 +5,16 @@ import 'package:open_fashion/features/widget/divider.dart';
 
 import '../../core/color/colors.dart';
 
-class Footer extends StatelessWidget {
+class Footer extends StatefulWidget {
   const Footer({super.key});
+
+  @override
+  State<Footer> createState() => _FooterState();
+}
+
+class _FooterState extends State<Footer> {
+
+  bool _isBlogGrid = true;
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +98,16 @@ class Footer extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        if (_isBlogGrid) {
+                          Navigator.pushNamed(context, "/blog_grid");
+                        } else {
+                          Navigator.pushNamed(context, "/blog_list");
+                        }
+                        setState(() {
+                          _isBlogGrid = !_isBlogGrid; // toggle
+                        });
+                      },
                       child: Text("Blog", style: AppTextStyle.textBlack16w400),
                     ),
                   ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:open_fashion/api/trending_tag.dart';
 import 'package:open_fashion/core/color/colors.dart';
+import 'package:open_fashion/core/style/headline_text.dart';
 import 'package:open_fashion/core/style/text_style.dart';
 import 'package:open_fashion/features/widget/custom_appbar.dart';
 import 'package:open_fashion/features/widget/footer.dart';
@@ -116,18 +117,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             SizedBox(height: 20),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              spacing: 5,
-              children: [
-                Text(
-                  "New Arrival".toUpperCase(),
-                  style: AppTextStyle.textBlack18w400,
-                ),
-                CustomDivider(width: 50),
-              ],
-            ),
+            HeadlineText(text: "New Arrival",),
+            SizedBox(height: 10),
+            CustomDivider(width: 50),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
               child: SingleChildScrollView(
@@ -214,10 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             SizedBox(height: 50),
 
-            Text(
-              "Collections".toUpperCase(),
-              style: AppTextStyle.textBlack18w400SP4,
-            ),
+            HeadlineText(text: "Collections",),
 
             SizedBox(height: 20),
 
@@ -347,11 +336,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             SizedBox(height: 50),
-
-            Text(
-              "Just for You".toUpperCase(),
-              style: AppTextStyle.textBlack18w400SP4,
-            ),
+            HeadlineText(text: "Just for You",),
 
             SizedBox(height: 10),
             CustomDivider(width: 50),
@@ -408,11 +393,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             SizedBox(height: 60),
-
-            Text(
-              "@Trending".toUpperCase(),
-              style: AppTextStyle.textBlack18w400SP4,
-            ),
+            HeadlineText(text: "@Trending",),
 
             SizedBox(height: 20),
 
@@ -499,10 +480,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
             SizedBox(height: 50),
 
-            Text(
-              "Follow Us".toUpperCase(),
-              style: AppTextStyle.textBlack18w400SP4,
-            ),
+            HeadlineText(text: "Follow Us",),
+
             SizedBox(height: 12),
             Center(child: Icon(LucideIcons.instagram200, color: AppColors.iconColor, size: 36,)),
             SizedBox(height: 16),
