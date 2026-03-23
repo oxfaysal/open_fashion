@@ -31,7 +31,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
       scrolledUnderElevation: 0,
       backgroundColor: widget.bgColor ?? AppColors.whiteColor,
       leading: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "/menu_expand");
+        },
         icon: Icon(
           LucideIcons.textAlignStart,
           color: AppColors.iconColor,
@@ -44,7 +46,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
           icon: Icon(LucideIcons.search, size: 24, color: AppColors.iconColor),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "/cart");
+          },
           icon: Icon(
             LucideIcons.shoppingBag,
             color: AppColors.blackColor,

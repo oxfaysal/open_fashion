@@ -94,6 +94,7 @@ class AppTextStyle {
     color: AppColors.bodyGrey33Color,
   );
 
+
   static final textPrimary15w400 = GoogleFonts.tenorSans(
     fontSize: 15,
     fontWeight: FontWeight.w400,
@@ -108,6 +109,18 @@ class AppTextStyle {
 
   static final tabUnActive14w400 = GoogleFonts.tenorSans(
     fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.textGrey88Color,
+  );
+
+  static final tabActive18w400 = GoogleFonts.tenorSans(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    color: AppColors.tabActiveColor,
+  );
+
+  static final tabUnActive18w400 = GoogleFonts.tenorSans(
+    fontSize: 18,
     fontWeight: FontWeight.w400,
     color: AppColors.textGrey88Color,
   );
