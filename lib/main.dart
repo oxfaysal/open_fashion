@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:open_fashion/features/screen/blog_list_screen.dart';
 import 'package:open_fashion/features/screen/cart_screen.dart';
 import 'package:open_fashion/features/screen/category_items_screen.dart';
+import 'package:open_fashion/features/screen/category_product_details_screen.dart';
 import 'package:open_fashion/features/screen/menu_screen.dart';
 
 import 'features/screen/blog_grid_screen.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "/menu_expand": (context) => const MenuExpandScreen(),
         "/cart": (context) => const CartScreen(),
         "/category_items": (context) => const CategoryItemsScreen(),
+        "/category_items_details": (context) => const CategoryProductDetailsScreen(),
       },
       initialRoute: "/home",
       debugShowCheckedModeBanner: false,

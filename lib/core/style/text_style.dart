@@ -30,6 +30,12 @@ class AppTextStyle {
     color: AppColors.blackColor,
   );
 
+  static final textBlack12w400 = GoogleFonts.tenorSans(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+  );
+
   static final textBlack14w400SP2 = GoogleFonts.tenorSans(
     fontSize: 14,
     fontWeight: FontWeight.w400,
