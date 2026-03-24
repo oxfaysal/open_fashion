@@ -3,7 +3,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 1,
     "brand": "LAMEREI",
     "title": "Recycle Boucle Knit Cardigan Pink",
-    "description": "A beautifully crafted cardigan made from recycled boucle knit fabric. The soft pink tone makes it a versatile piece that pairs effortlessly with both casual and smart outfits.",
+    "description":
+        "A beautifully crafted cardigan made from recycled boucle knit fabric. The soft pink tone makes it a versatile piece that pairs effortlessly with both casual and smart outfits.",
     "price": 120,
     "discountPrice": 99,
     "ratings": 4.8,
@@ -14,11 +15,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=700&q=75",
       "https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=700&q=75",
     ],
-    "colors": ["#1C1C1C", "#D4A29C", "#C4B5A5", "#F5F0EB"],
+    "colors": ["1C1C1C", "D4A29C", "C4B5A5", "F5F0EB"],
     "sizes": ["S", "M", "L", "XL"],
     "isFavorite": false,
-    "materials": "We work with monitoring programmes to ensure compliance with safety, health and quality standards for our products.",
-    "care": "To keep your jackets and coats clean, you only need to freshen them up and go over them with a cloth or a clothes brush.",
+    "materials":
+        "We work with monitoring programmes to ensure compliance with safety, health and quality standards for our products.",
+    "care":
+        "To keep your jackets and coats clean, you only need to freshen them up and go over them with a cloth or a clothes brush.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -35,7 +38,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 2,
     "brand": "ZARA",
     "title": "Floral Wrap Midi Dress",
-    "description": "A feminine floral wrap dress with a flattering midi length. The vibrant print and soft fabric make it perfect for both daytime outings and evening events.",
+    "description":
+        "A feminine floral wrap dress with a flattering midi length. The vibrant print and soft fabric make it perfect for both daytime outings and evening events.",
     "price": 85,
     "discountPrice": 70,
     "ratings": 4.6,
@@ -46,11 +50,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=700&q=75",
       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700&q=75",
     ],
-    "colors": ["#D4A29C", "#F5F0EB", "#8B7355"],
+    "colors": ["D4A29C", "F5F0EB", "8B7355"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": true,
-    "materials": "100% viscose fabric with floral print. Lightweight and breathable for all-day comfort.",
-    "care": "Machine wash on gentle cycle. Do not tumble dry. Iron on low heat.",
+    "materials":
+        "100% viscose fabric with floral print. Lightweight and breathable for all-day comfort.",
+    "care":
+        "Machine wash on gentle cycle. Do not tumble dry. Iron on low heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -66,7 +72,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 3,
     "brand": "COS",
     "title": "Oversized Linen Blazer Cream",
-    "description": "A relaxed oversized blazer crafted from premium linen. The cream tone and structured shoulders make it an effortlessly chic layering piece for any occasion.",
+    "description":
+        "A relaxed oversized blazer crafted from premium linen. The cream tone and structured shoulders make it an effortlessly chic layering piece for any occasion.",
     "price": 160,
     "discountPrice": 135,
     "ratings": 4.7,
@@ -77,11 +84,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1551489186-cf8726f514f8?w=700&q=75",
       "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=75",
     ],
-    "colors": ["#F5F0EB", "#1C1C1C", "#C4B5A5"],
+    "colors": ["F5F0EB", "1C1C1C", "C4B5A5"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": false,
-    "materials": "Premium linen blend with smooth inner lining. Breathable and comfortable for year-round wear.",
-    "care": "Dry clean recommended. Can be hand washed on cold. Do not tumble dry.",
+    "materials":
+        "Premium linen blend with smooth inner lining. Breathable and comfortable for year-round wear.",
+    "care":
+        "Dry clean recommended. Can be hand washed on cold. Do not tumble dry.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -98,7 +107,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 4,
     "brand": "H&M",
     "title": "High Waist Pleated Skirt Beige",
-    "description": "A elegant high waist pleated skirt with a flowing silhouette. The neutral beige tone makes it incredibly easy to style with any top for a polished look.",
+    "description":
+        "A elegant high waist pleated skirt with a flowing silhouette. The neutral beige tone makes it incredibly easy to style with any top for a polished look.",
     "price": 55,
     "discountPrice": 45,
     "ratings": 4.4,
@@ -109,10 +119,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1594938298603-c8148c4b4deb?w=700&q=75",
       "https://images.unsplash.com/photo-1570976447640-ac859083963f?w=700&q=75",
     ],
-    "colors": ["#C4B5A5", "#F5F0EB", "#1C1C1C", "#D4A29C"],
+    "colors": ["C4B5A5", "F5F0EB", "1C1C1C", "D4A29C"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": false,
-    "materials": "Soft woven fabric with pleated detailing. Fully lined for comfort and modesty.",
+    "materials":
+        "Soft woven fabric with pleated detailing. Fully lined for comfort and modesty.",
     "care": "Machine wash cold. Hang to dry. Iron on low heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -129,7 +140,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 5,
     "brand": "MANGO",
     "title": "Silk Blend Satin Blouse White",
-    "description": "A luxurious silk blend satin blouse with a relaxed fit. The smooth texture and subtle sheen make it perfect for both office wear and special occasions.",
+    "description":
+        "A luxurious silk blend satin blouse with a relaxed fit. The smooth texture and subtle sheen make it perfect for both office wear and special occasions.",
     "price": 95,
     "discountPrice": 80,
     "ratings": 4.8,
@@ -140,11 +152,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=700&q=75",
       "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=700&q=75",
     ],
-    "colors": ["#F5F0EB", "#1C1C1C", "#D4A29C"],
+    "colors": ["F5F0EB", "1C1C1C", "D4A29C"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": true,
-    "materials": "55% silk, 45% polyester blend. Soft and breathable with a natural sheen.",
-    "care": "Hand wash only in cold water. Do not tumble dry. Iron on low heat with cloth.",
+    "materials":
+        "55% silk, 45% polyester blend. Soft and breathable with a natural sheen.",
+    "care":
+        "Hand wash only in cold water. Do not tumble dry. Iron on low heat with cloth.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -160,7 +174,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 6,
     "brand": "LAMEREI",
     "title": "Wool Blend Oversized Coat Beige",
-    "description": "An oversized coat crafted from a premium wool blend with a soft inner lining. The warm beige tone and relaxed fit give it a modern yet timeless appeal.",
+    "description":
+        "An oversized coat crafted from a premium wool blend with a soft inner lining. The warm beige tone and relaxed fit give it a modern yet timeless appeal.",
     "price": 200,
     "discountPrice": 170,
     "ratings": 4.9,
@@ -171,10 +186,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=700&q=75",
       "https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=700&q=75",
     ],
-    "colors": ["#C4B5A5", "#1C1C1C", "#F5F0EB"],
+    "colors": ["C4B5A5", "1C1C1C", "F5F0EB"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": false,
-    "materials": "Premium wool blend fabric with soft inner lining for extra warmth and comfort.",
+    "materials":
+        "Premium wool blend fabric with soft inner lining for extra warmth and comfort.",
     "care": "Dry clean only. Do not wash in washing machine.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -191,7 +207,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 7,
     "brand": "ARKET",
     "title": "Ribbed Knit Turtleneck Sweater",
-    "description": "A cozy ribbed knit turtleneck sweater perfect for the colder months. The slim fit and classic design make it a timeless wardrobe essential.",
+    "description":
+        "A cozy ribbed knit turtleneck sweater perfect for the colder months. The slim fit and classic design make it a timeless wardrobe essential.",
     "price": 110,
     "discountPrice": 90,
     "ratings": 4.7,
@@ -202,7 +219,7 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=700&q=75",
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=700&q=75",
     ],
-    "colors": ["#1C1C1C", "#C4B5A5", "#8B7355", "#F5F0EB"],
+    "colors": ["1C1C1C", "C4B5A5", "8B7355", "F5F0EB"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": true,
     "materials": "100% merino wool. Naturally soft, warm and odour-resistant.",
@@ -222,7 +239,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 8,
     "brand": "& OTHER STORIES",
     "title": "Wide Leg Tailored Trousers Black",
-    "description": "Sophisticated wide leg trousers with a tailored silhouette. The high waist design and clean lines create an elongating effect for a polished and modern look.",
+    "description":
+        "Sophisticated wide leg trousers with a tailored silhouette. The high waist design and clean lines create an elongating effect for a polished and modern look.",
     "price": 130,
     "discountPrice": 110,
     "ratings": 4.5,
@@ -232,11 +250,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=700&q=75",
       "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=75",
     ],
-    "colors": ["#1C1C1C", "#C4B5A5", "#F5F0EB"],
+    "colors": ["1C1C1C", "C4B5A5", "F5F0EB"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": false,
-    "materials": "Recycled polyester and viscose blend. Smooth finish with structured drape.",
-    "care": "Machine wash cold on gentle cycle. Do not tumble dry. Iron on medium heat.",
+    "materials":
+        "Recycled polyester and viscose blend. Smooth finish with structured drape.",
+    "care":
+        "Machine wash cold on gentle cycle. Do not tumble dry. Iron on medium heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -252,7 +272,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 9,
     "brand": "TOTEME",
     "title": "Striped Cotton T-Shirt Navy",
-    "description": "A classic striped cotton t-shirt with a relaxed fit. The navy and white stripes give it a timeless nautical feel, making it easy to style with jeans or skirts.",
+    "description":
+        "A classic striped cotton t-shirt with a relaxed fit. The navy and white stripes give it a timeless nautical feel, making it easy to style with jeans or skirts.",
     "price": 65,
     "discountPrice": 55,
     "ratings": 4.6,
@@ -263,10 +284,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?w=700&q=75",
       "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=700&q=75",
     ],
-    "colors": ["#1C1C1C", "#F5F0EB", "#D4A29C"],
+    "colors": ["1C1C1C", "F5F0EB", "D4A29C"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": false,
-    "materials": "100% organic cotton. Soft and breathable fabric perfect for everyday wear.",
+    "materials":
+        "100% organic cotton. Soft and breathable fabric perfect for everyday wear.",
     "care": "Machine wash at 30°C. Do not tumble dry. Iron on low heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -283,7 +305,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 10,
     "brand": "WEEKDAY",
     "title": "Slim Fit Denim Jeans Light Blue",
-    "description": "A versatile slim fit denim jean in a classic light blue wash. The mid-rise waist and tapered leg create a flattering silhouette for everyday styling.",
+    "description":
+        "A versatile slim fit denim jean in a classic light blue wash. The mid-rise waist and tapered leg create a flattering silhouette for everyday styling.",
     "price": 75,
     "discountPrice": 60,
     "ratings": 4.4,
@@ -294,11 +317,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=700&q=75",
       "https://images.unsplash.com/photo-1594938298603-c8148c4b4deb?w=700&q=75",
     ],
-    "colors": ["#7B9BB2", "#1C1C1C", "#8B7355"],
+    "colors": ["7B9BB2", "1C1C1C", "8B7355"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": true,
-    "materials": "98% cotton, 2% elastane. Classic denim with a comfortable stretch.",
-    "care": "Machine wash inside out at 30°C. Do not tumble dry. Iron on low heat.",
+    "materials":
+        "98% cotton, 2% elastane. Classic denim with a comfortable stretch.",
+    "care":
+        "Machine wash inside out at 30°C. Do not tumble dry. Iron on low heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -314,7 +339,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 11,
     "brand": "SANDRO",
     "title": "Floral Embroidered Mini Dress",
-    "description": "A romantic mini dress with delicate floral embroidery. The fitted bodice and flared skirt create a feminine silhouette perfect for special occasions.",
+    "description":
+        "A romantic mini dress with delicate floral embroidery. The fitted bodice and flared skirt create a feminine silhouette perfect for special occasions.",
     "price": 220,
     "discountPrice": 185,
     "ratings": 4.9,
@@ -325,10 +351,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=700&q=75",
       "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=700&q=75",
     ],
-    "colors": ["#F5F0EB", "#D4A29C", "#C4B5A5"],
+    "colors": ["F5F0EB", "D4A29C", "C4B5A5"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": false,
-    "materials": "Lightweight organza with floral embroidery. Fully lined for comfort.",
+    "materials":
+        "Lightweight organza with floral embroidery. Fully lined for comfort.",
     "care": "Dry clean only. Do not wash. Store hanging to maintain shape.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -345,7 +372,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 12,
     "brand": "REFORMATION",
     "title": "Linen Wide Leg Pants Sand",
-    "description": "Breezy wide leg linen pants in a warm sand tone. Effortlessly stylish and comfortable, these pants are the perfect summer wardrobe staple.",
+    "description":
+        "Breezy wide leg linen pants in a warm sand tone. Effortlessly stylish and comfortable, these pants are the perfect summer wardrobe staple.",
     "price": 148,
     "discountPrice": 120,
     "ratings": 4.7,
@@ -356,10 +384,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=700&q=75",
       "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700&q=75",
     ],
-    "colors": ["#C4B5A5", "#F5F0EB", "#8B7355"],
+    "colors": ["C4B5A5", "F5F0EB", "8B7355"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": true,
-    "materials": "100% European linen. Naturally breathable and gets softer with every wash.",
+    "materials":
+        "100% European linen. Naturally breathable and gets softer with every wash.",
     "care": "Machine wash cold. Tumble dry low. Iron while slightly damp.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -375,7 +404,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 13,
     "brand": "ACNE STUDIOS",
     "title": "Oversized Denim Jacket Vintage Blue",
-    "description": "An iconic oversized denim jacket with a vintage blue wash. The relaxed fit and classic details make it a versatile layering piece for any casual outfit.",
+    "description":
+        "An iconic oversized denim jacket with a vintage blue wash. The relaxed fit and classic details make it a versatile layering piece for any casual outfit.",
     "price": 290,
     "discountPrice": 250,
     "ratings": 4.8,
@@ -386,11 +416,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=700&q=75",
       "https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=700&q=75",
     ],
-    "colors": ["#7B9BB2", "#1C1C1C", "#8B7355"],
+    "colors": ["7B9BB2", "1C1C1C", "8B7355"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": false,
-    "materials": "100% cotton denim. Washed for a vintage effect with a soft handfeel.",
-    "care": "Machine wash inside out at 30°C. Do not tumble dry. Iron on medium heat.",
+    "materials":
+        "100% cotton denim. Washed for a vintage effect with a soft handfeel.",
+    "care":
+        "Machine wash inside out at 30°C. Do not tumble dry. Iron on medium heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -406,7 +438,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 14,
     "brand": "FILIPPA K",
     "title": "Draped Jersey Midi Skirt Dusty Rose",
-    "description": "A beautifully draped jersey midi skirt in a soft dusty rose tone. The fluid fabric and wrap-style design create an effortlessly elegant silhouette.",
+    "description":
+        "A beautifully draped jersey midi skirt in a soft dusty rose tone. The fluid fabric and wrap-style design create an effortlessly elegant silhouette.",
     "price": 140,
     "discountPrice": 115,
     "ratings": 4.6,
@@ -417,10 +450,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1570976447640-ac859083963f?w=700&q=75",
       "https://images.unsplash.com/photo-1594938298603-c8148c4b4deb?w=700&q=75",
     ],
-    "colors": ["#D4A29C", "#F5F0EB", "#C4B5A5"],
+    "colors": ["D4A29C", "F5F0EB", "C4B5A5"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": true,
-    "materials": "95% viscose, 5% elastane. Soft and stretchy with a beautiful drape.",
+    "materials":
+        "95% viscose, 5% elastane. Soft and stretchy with a beautiful drape.",
     "care": "Hand wash in cold water. Do not tumble dry. Lay flat to dry.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -437,7 +471,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 15,
     "brand": "GANNI",
     "title": "Printed Smock Dress Yellow",
-    "description": "A playful smocked dress in a cheerful yellow print. The elasticated bodice and flowy skirt make it comfortable and flattering for all body types.",
+    "description":
+        "A playful smocked dress in a cheerful yellow print. The elasticated bodice and flowy skirt make it comfortable and flattering for all body types.",
     "price": 175,
     "discountPrice": 148,
     "ratings": 4.5,
@@ -448,10 +483,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700&q=75",
       "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=700&q=75",
     ],
-    "colors": ["#F5C842", "#F5F0EB", "#D4A29C"],
+    "colors": ["F5C842", "F5F0EB", "D4A29C"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": false,
-    "materials": "100% organic cotton with floral smock detailing. Soft and lightweight.",
+    "materials":
+        "100% organic cotton with floral smock detailing. Soft and lightweight.",
     "care": "Machine wash at 30°C. Do not tumble dry. Iron on low heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -468,7 +504,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 16,
     "brand": "ARITZIA",
     "title": "Cashmere Crewneck Sweater Oatmeal",
-    "description": "A luxuriously soft cashmere crewneck sweater in a warm oatmeal tone. The classic fit and premium fabric make it an investment piece you will reach for season after season.",
+    "description":
+        "A luxuriously soft cashmere crewneck sweater in a warm oatmeal tone. The classic fit and premium fabric make it an investment piece you will reach for season after season.",
     "price": 195,
     "discountPrice": 165,
     "ratings": 4.9,
@@ -479,11 +516,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=700&q=75",
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=700&q=75",
     ],
-    "colors": ["#C4B5A5", "#F5F0EB", "#1C1C1C", "#D4A29C"],
+    "colors": ["C4B5A5", "F5F0EB", "1C1C1C", "D4A29C"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": true,
-    "materials": "100% grade A cashmere. Incredibly soft, lightweight and naturally warm.",
-    "care": "Hand wash in cool water with mild detergent. Lay flat to dry. Do not tumble dry.",
+    "materials":
+        "100% grade A cashmere. Incredibly soft, lightweight and naturally warm.",
+    "care":
+        "Hand wash in cool water with mild detergent. Lay flat to dry. Do not tumble dry.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -499,7 +538,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 17,
     "brand": "ISABEL MARANT",
     "title": "Broderie Anglaise Cotton Blouse",
-    "description": "A romantic broderie anglaise blouse with intricate eyelet detailing. The lightweight cotton fabric and relaxed silhouette make it a perfect warm-weather wardrobe piece.",
+    "description":
+        "A romantic broderie anglaise blouse with intricate eyelet detailing. The lightweight cotton fabric and relaxed silhouette make it a perfect warm-weather wardrobe piece.",
     "price": 240,
     "discountPrice": 200,
     "ratings": 4.7,
@@ -510,11 +550,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=700&q=75",
       "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=700&q=75",
     ],
-    "colors": ["#F5F0EB", "#D4A29C"],
+    "colors": ["F5F0EB", "D4A29C"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": false,
-    "materials": "100% cotton with broderie anglaise embroidery. Lightweight and breathable.",
-    "care": "Machine wash cold on gentle cycle. Do not tumble dry. Iron on low heat.",
+    "materials":
+        "100% cotton with broderie anglaise embroidery. Lightweight and breathable.",
+    "care":
+        "Machine wash cold on gentle cycle. Do not tumble dry. Iron on low heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -530,7 +572,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 18,
     "brand": "STAUD",
     "title": "Mini Puffer Jacket Lavender",
-    "description": "A chic mini puffer jacket in a soft lavender tone. The cropped length and puff detailing make it a stylish and warm outerwear option for transitional weather.",
+    "description":
+        "A chic mini puffer jacket in a soft lavender tone. The cropped length and puff detailing make it a stylish and warm outerwear option for transitional weather.",
     "price": 265,
     "discountPrice": 225,
     "ratings": 4.6,
@@ -541,10 +584,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=700&q=75",
       "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=700&q=75",
     ],
-    "colors": ["#B39DDB", "#F5F0EB", "#1C1C1C", "#D4A29C"],
+    "colors": ["B39DDB", "F5F0EB", "1C1C1C", "D4A29C"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": false,
-    "materials": "Recycled polyester shell with down filling. Water-resistant and lightweight.",
+    "materials":
+        "Recycled polyester shell with down filling. Water-resistant and lightweight.",
     "care": "Machine wash cold. Tumble dry low with dryer balls. Do not iron.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
@@ -560,7 +604,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 19,
     "brand": "VINCE",
     "title": "Slip Maxi Dress Champagne",
-    "description": "An elegant slip maxi dress in a champagne tone. The bias cut and satin-like fabric skim the body beautifully, making it perfect for evening events or special occasions.",
+    "description":
+        "An elegant slip maxi dress in a champagne tone. The bias cut and satin-like fabric skim the body beautifully, making it perfect for evening events or special occasions.",
     "price": 310,
     "discountPrice": 265,
     "ratings": 4.8,
@@ -571,11 +616,13 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=700&q=75",
       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700&q=75",
     ],
-    "colors": ["#F5E6C8", "#F5F0EB", "#1C1C1C"],
+    "colors": ["F5E6C8", "F5F0EB", "1C1C1C"],
     "sizes": ["XS", "S", "M", "L"],
     "isFavorite": true,
-    "materials": "100% silk charmeuse. Incredibly smooth and lightweight with a natural sheen.",
-    "care": "Hand wash in cold water with mild detergent. Do not tumble dry. Iron on low heat.",
+    "materials":
+        "100% silk charmeuse. Incredibly smooth and lightweight with a natural sheen.",
+    "care":
+        "Hand wash in cold water with mild detergent. Do not tumble dry. Iron on low heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},
       {"icon": "no_tumble_dry", "label": "Do not tumble dry"},
@@ -591,7 +638,8 @@ List<Map<String, dynamic>> productCategoryList = [
     "id": 20,
     "brand": "RAG & BONE",
     "title": "Straight Leg Chino Pants Khaki",
-    "description": "Classic straight leg chino pants in a versatile khaki tone. The clean cut and relaxed fit make them a wardrobe staple that pairs with everything from blazers to casual tops.",
+    "description":
+        "Classic straight leg chino pants in a versatile khaki tone. The clean cut and relaxed fit make them a wardrobe staple that pairs with everything from blazers to casual tops.",
     "price": 185,
     "discountPrice": 155,
     "ratings": 4.5,
@@ -601,10 +649,11 @@ List<Map<String, dynamic>> productCategoryList = [
       "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=75",
       "https://images.unsplash.com/photo-1570976447640-ac859083963f?w=700&q=75",
     ],
-    "colors": ["#8B7355", "#1C1C1C", "#F5F0EB", "#C4B5A5"],
+    "colors": ["8B7355", "1C1C1C", "F5F0EB", "C4B5A5"],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "isFavorite": false,
-    "materials": "98% cotton, 2% elastane. Soft chino fabric with a slight stretch for comfort.",
+    "materials":
+        "98% cotton, 2% elastane. Soft chino fabric with a slight stretch for comfort.",
     "care": "Machine wash cold. Do not tumble dry. Iron on medium heat.",
     "careIcons": [
       {"icon": "no_bleach", "label": "Do not use bleach"},

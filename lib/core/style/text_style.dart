@@ -88,6 +88,12 @@ class AppTextStyle {
     color: AppColors.divider55Color,
   );
 
+  static final text55Grey16w400 = GoogleFonts.tenorSans(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: AppColors.divider55Color,
+  );
+
   static final text33Grey12w400 = GoogleFonts.tenorSans(
     fontSize: 12,
     fontWeight: FontWeight.w400,
@@ -103,6 +109,12 @@ class AppTextStyle {
 
   static final textPrimary15w400 = GoogleFonts.tenorSans(
     fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: AppColors.primaryColor,
+  );
+
+  static final textPrimary18w400 = GoogleFonts.tenorSans(
+    fontSize: 18,
     fontWeight: FontWeight.w400,
     color: AppColors.primaryColor,
   );

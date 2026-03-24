@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class ImageSlider extends StatefulWidget {
   const ImageSlider({super.key, required this.images});
-  final List<String> images;
+
+  final List<dynamic> images;
 
   @override
   State<ImageSlider> createState() => _ImageSliderState();
